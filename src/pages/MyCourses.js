@@ -1,13 +1,11 @@
-import logo from '../logo.png';
 import '../styling/App.css';
 
-function Bloop() {
+function MyCourses() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          A;OSDFHA;LDKFH;ASLDFKH;ASLDFKH;ASLDFKHLAKSJIHAISGH
+          course stuff
         </p>
         <a
           className="App-link"
@@ -22,4 +20,4 @@ function Bloop() {
   );
 }
 
-export default Bloop;
+export default MyCourses;

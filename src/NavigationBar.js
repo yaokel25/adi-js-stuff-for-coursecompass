@@ -16,11 +16,16 @@ function NavigationBar() {
                     rel="noopener noreferrer"
                 >Home</a>
                 <a
-                    className="Other-link"
-                    href="/Blooper"
+                    className="Browse-link"
+                    href="/Browse"
                     rel="noopener noreferrer"
-                >Other page</a>
-                <input type="text" className="Search-bar" placeholder="Search..."/>
+                >Browse</a>
+                <a
+                    className="My-courses-link"
+                    href="/my-courses"
+                    rel="noopener noreferrer"
+                >My Courses</a>
+                {/* <input type="text" className="Search-bar" placeholder="Search..."/> */}
             </header>
         </div>
     );

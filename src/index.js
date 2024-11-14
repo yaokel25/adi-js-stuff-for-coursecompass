@@ -5,7 +5,8 @@ import './styling/index.css';
 
 import NavigationBar from './NavigationBar';
 import App from './pages/App';
-import Blooper from './pages/Blooper';
+import Browse from './pages/Browse';
+import MyCourses from './pages/MyCourses';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -20,9 +21,13 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/Blooper",
-    element: <Blooper />,
+    path: "/Browse",
+    element: <Browse />,
   },
+  {
+    path: "/my-courses",
+    element: <MyCourses />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

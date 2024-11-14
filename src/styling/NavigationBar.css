@@ -11,7 +11,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .Nav-logo {
-    animation: Nav-logo-spin infinite 20s linear;
+    animation: Nav-logo-spin infinite 15s linear;
   }
 }
 
@@ -52,7 +52,7 @@
   left: 150px;
 }
 
-.Other-link {
+.Browse-link {
   text-decoration: none;
   color: white;
   position: fixed;
@@ -60,7 +60,15 @@
   left: 300px;
 }
 
-/* Style the search box inside the navigation bar */
+.My-courses-link {
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 30px;
+  left: 480px;
+}
+
+/* Style the search box inside the navigation bar
 .Search-bar {
   border: none;
   border-radius: 10px;
@@ -68,4 +76,4 @@
   position: fixed;
   top: 40px;
   right: 10px;
-}
+} */

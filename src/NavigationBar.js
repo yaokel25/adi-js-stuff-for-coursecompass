@@ -5,6 +5,10 @@ import './styling/NavigationBar.css';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function NavigationBar() {
+    // document.getElementById("btn").addEventListener("click", confirmation);
+    // WHY DOES THIS NOT WORK???
+    // AIJFHPAWOIEHFPAWOEIHRPWAIEOHRPASIOHFPGAIOGUAEOIGHPAO9IHGPAWEIGHPASOEIGHPSAOEIHPAOSEIGHPEOSIAHGPOIAHOPSGPOISHFOIPSFHJOISEHG;OARSGH;ODIRGH;SOIDHG;SODIGHLSIEUGHUKYGSFIULAWEIJFBHLAIWESUFH
+
     return (
         <div className="Nav">
             <div class="rectangle"></div>
@@ -25,7 +29,7 @@ function NavigationBar() {
                     href="/my-courses"
                     rel="noopener noreferrer"
                 >My Courses</a>
-                <button id="btn" className="Log-out" onclick="confirmation()">Log out</button>
+                <button id="btn" className="Log-out">Log out</button>
                 {/* <input type="text" className="Search-bar" placeholder="Search..."/> */}
             </header>
         </div>
@@ -39,8 +43,7 @@ function confirmation() {
     else {
 
     }
+    return 0;
 }
-
-// document.getElementById("btn").addEventListener("click", confirmation);
 
 export default NavigationBar;

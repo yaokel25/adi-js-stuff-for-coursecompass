@@ -25,10 +25,22 @@ function NavigationBar() {
                     href="/my-courses"
                     rel="noopener noreferrer"
                 >My Courses</a>
+                <button id="btn" className="Log-out" onclick="confirmation()">Log out</button>
                 {/* <input type="text" className="Search-bar" placeholder="Search..."/> */}
             </header>
         </div>
     );
-  }
-  
-  export default NavigationBar;
+}
+
+function confirmation() {
+    if (window.confirm("Are you sure you want to log out?")) {
+        window.open("", "_self");
+    }
+    else {
+
+    }
+}
+
+// document.getElementById("btn").addEventListener("click", confirmation);
+
+export default NavigationBar;

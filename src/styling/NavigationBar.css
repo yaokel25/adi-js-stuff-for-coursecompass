@@ -1,5 +1,8 @@
 .Nav {
   text-align: left;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 .Nav-logo {
   position: fixed;
@@ -17,18 +20,22 @@
 
 .Nav-header {
   /* min-height: 100vh; */
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: blue;
+  z-index: 1;
 }
 
 .rectangle {
+  position: fixed;
+  top: 0px;
   height: 100px;
   width: 100%;
   background-color: #0a0a0a;
+  z-index: 1;
 }
 
 .Nav-link {
@@ -65,7 +72,38 @@
   color: white;
   position: fixed;
   top: 30px;
-  left: 480px;
+  left: 466px;
+}
+
+button {
+  border: none;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.Log-out {
+  text-decoration: none;
+  color: black;
+  position: fixed;
+  top: 20px;
+  right: 50px;
+}
+
+.Log-out:hover {
+  background-color: red;
+  color: white;
+}
+
+.Log-out:focus {
+  background-color: red;
+  color: black;
 }
 
 /* Style the search box inside the navigation bar

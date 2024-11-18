@@ -1,9 +1,9 @@
-import '../styling/App.css';
+import '../styling/Home.css';
 
 function MyCourses() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Home">
+      <header className="Home-header">
         <p>
           course stuff
         </p>

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 import './styling/index.css';
 
 import NavigationBar from './NavigationBar';
-import App from './pages/App';
+import Home from './pages/Home';
 import Browse from './pages/Browse';
 import MyCourses from './pages/MyCourses';
 
@@ -18,7 +18,7 @@ import {
 const router = createBrowserRouter([
   {
     path: "",
-    element: <App />,
+    element: <Home />,
   },
   {
     path: "/Browse",

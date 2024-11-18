@@ -14,6 +14,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import CourseInformationPage from './pages/CourseInformationPage';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/my-courses",
     element: <MyCourses />
+  },
+  {
+    path: "/course-info",
+    element: <CourseInformationPage />
   }
 ]);
 

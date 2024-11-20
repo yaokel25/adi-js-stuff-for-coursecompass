@@ -43,7 +43,7 @@ function NavigationBar() {
 
 function confirmation() {
     if (window.confirm("Are you sure you want to log out?")) {
-        window.open("", "_self");
+        window.open("/", "_self");
     }
     else {
 

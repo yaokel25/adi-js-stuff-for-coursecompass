@@ -29,6 +29,11 @@ function NavigationBar() {
                     href="/my-courses"
                     rel="noopener noreferrer"
                 >My Courses</a>
+                <a
+                    className="Data-test-link"
+                    href="/data-test"
+                    rel="noopener noreferrer"
+                >Data Testing</a>
                 <button id="btn" className="Log-out">Log out</button>
                 {/* <input type="text" className="Search-bar" placeholder="Search..."/> */}
             </header>

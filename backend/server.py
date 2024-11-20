@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def pythonHome():
-    return "Hello Adi Duggal"
+    return "This is the python server"
 
 @app.route('/data')
 def showName():

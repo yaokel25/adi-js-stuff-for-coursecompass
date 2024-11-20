@@ -75,6 +75,14 @@
   left: 466px;
 }
 
+.Data-test-link {
+  text-decoration: none;
+  color: white;
+  position: fixed;
+  top: 30px;
+  left: 688px;
+}
+
 button.Log-out {
   border: none;
   padding: 16px 32px;

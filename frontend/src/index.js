@@ -7,7 +7,7 @@ import NavigationBar from './NavigationBar';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
 import MyCourses from './pages/MyCourses';
-import App from './pages/App';
+import DataTest from './pages/DataTest';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -35,8 +35,8 @@ const router = createBrowserRouter([
     element: <CourseInformationPage />
   },
   {
-    path: "/app",
-    element: <App />
+    path: "/data-test",
+    element: <DataTest />
   }
 ]);
 

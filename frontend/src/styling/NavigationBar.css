@@ -112,6 +112,7 @@ button.Log-out {
 }
 
 .Log-out:focus {
+  transition-duration: 0s;
   background-color: black;
   color: red;
   border-color: red;

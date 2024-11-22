@@ -11,7 +11,7 @@ function NavigationBar() {
 
     return (
         <div className="Nav">
-            <div class="rectangle"></div>
+            <div className="rectangle"></div>
             <header className="Nav-header">
                 <img src={logo} className="Nav-logo" alt="logo" />
                 <a

@@ -84,7 +84,7 @@
 }
 
 button.Log-out {
-  border: none;
+  border: solid;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
@@ -98,7 +98,8 @@ button.Log-out {
 
 .Log-out {
   text-decoration: none;
-  color: black;
+  background-color: #0a0a0a;
+  color: white;
   position: fixed;
   top: 20px;
   right: 50px;
@@ -107,11 +108,13 @@ button.Log-out {
 .Log-out:hover {
   background-color: red;
   color: white;
+  border-color: red;
 }
 
 .Log-out:focus {
-  background-color: red;
-  color: black;
+  background-color: black;
+  color: red;
+  border-color: red;
 }
 
 /* Style the search box inside the navigation bar

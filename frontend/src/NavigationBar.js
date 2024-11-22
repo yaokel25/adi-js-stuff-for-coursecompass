@@ -5,10 +5,6 @@ import './styling/NavigationBar.css';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 function NavigationBar() {
-    // document.getElementById("btn").addEventListener("click", confirmation);
-    // WHY DOES THIS NOT WORK???
-    // AIJFHPAWOIEHFPAWOEIHRPWAIEOHRPASIOHFPGAIOGUAEOIGHPAO9IHGPAWEIGHPASOEIGHPSAOEIHPAOSEIGHPEOSIAHGPOIAHOPSGPOISHFOIPSFHJOISEHG;OARSGH;ODIRGH;SOIDHG;SODIGHLSIEUGHUKYGSFIULAWEIJFBHLAIWESUFH
-
     return (
         <div className="Nav">
             <div className="rectangle"></div>
@@ -34,7 +30,7 @@ function NavigationBar() {
                     href="/data-test"
                     rel="noopener noreferrer"
                 >Data Testing</a>
-                <button id="btn" className="Log-out">Log out</button>
+                <button id="btn" className="Log-out" onClick={confirmation}>Log out</button>
                 {/* <input type="text" className="Search-bar" placeholder="Search..."/> */}
             </header>
         </div>

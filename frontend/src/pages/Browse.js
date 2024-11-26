@@ -17,10 +17,20 @@ function Browse() {
   return (
     <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
      <h1>Please Select School/Department/Course/Unit</h1>
+     <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+     /*
       <div className='dd-content'>
 
-
-        {/* Dropdown 1 */}
+      
         <div className='dd1'>
             <select
               value={selectedOption1}
@@ -35,7 +45,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 2 */}
+       
         <div>
             <select
               value={selectedOption2}
@@ -50,7 +60,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 3 */}
+      
         <div>
             <select
               value={selectedOption3}
@@ -65,7 +75,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 4 */}
+      
         <div>
             <select
               value={selectedOption4}
@@ -79,7 +89,7 @@ function Browse() {
               ))}
             </select>
         </div>
-      </div>
+      </div>*/
       {/* Display selected options */}
       <div style={{ marginTop: '20px' }}>
         <h2>Selected Options:</h2>

@@ -1,3 +1,4 @@
+import '../styling/Browse.css';
 import React, { useState } from 'react';
 
 function Browse() {
@@ -14,69 +15,69 @@ function Browse() {
   const dropdownOptions4 = ['Teacher1', 'Teacher2', 'Teacher3'];
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
      <h1>Please Select School/Department/Course/Unit</h1>
+      <div className='dd-content'>
+        {/* Dropdown 1 */}
+        <div className='dd1'>
+            <select
+              value={selectedOption1}
+              onChange={(e) => setSelectedOption1(e.target.value)}
+            >
+              <option value="">Select School</option>
+              {dropdownOptions1.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+        </div>
 
-      {/* Dropdown 1 */}
-      <div>
-          <select
-            value={selectedOption1}
-            onChange={(e) => setSelectedOption1(e.target.value)}
-          >
-            <option value="">Select School</option>
-            {dropdownOptions1.map((option, index) => (
-              <option key={index} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+        {/* Dropdown 2 */}
+        <div>
+            <select
+              value={selectedOption2}
+              onChange={(e) => setSelectedOption2(e.target.value)}
+            >
+              <option value="">Select Department/Grade</option>
+              {dropdownOptions2.map((choice, index) => (
+                <option key={index} value={choice}>
+                  {choice}
+                </option>
+              ))}
+            </select>
+        </div>
+
+        {/* Dropdown 3 */}
+        <div>
+            <select
+              value={selectedOption3}
+              onChange={(e) => setSelectedOption3(e.target.value)}
+            >
+              <option value="">Select Course</option>
+              {dropdownOptions3.map((item, index) => (
+                <option key={index} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+        </div>
+
+        {/* Dropdown 4 */}
+        <div>
+            <select
+              value={selectedOption4}
+              onChange={(e) => setSelectedOption4(e.target.value)}
+            >
+              <option value="">Select Teacher</option>
+              {dropdownOptions4.map((option, index) => (
+                <option key={index} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+        </div>
       </div>
-
-      {/* Dropdown 2 */}
-      <div>
-          <select
-            value={selectedOption2}
-            onChange={(e) => setSelectedOption2(e.target.value)}
-          >
-            <option value="">Select Department/Grade</option>
-            {dropdownOptions2.map((choice, index) => (
-              <option key={index} value={choice}>
-                {choice}
-              </option>
-            ))}
-          </select>
-      </div>
-
-      {/* Dropdown 3 */}
-      <div>
-          <select
-            value={selectedOption3}
-            onChange={(e) => setSelectedOption3(e.target.value)}
-          >
-            <option value="">Select Course</option>
-            {dropdownOptions3.map((item, index) => (
-              <option key={index} value={item}>
-                {item}
-              </option>
-            ))}
-          </select>
-      </div>
-
-      {/* Dropdown 4 */}
-      <div>
-          <select
-            value={selectedOption4}
-            onChange={(e) => setSelectedOption4(e.target.value)}
-          >
-            <option value="">Select Teacher</option>
-            {dropdownOptions4.map((option, index) => (
-              <option key={index} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
-      </div>
-
       {/* Display selected options */}
       <div style={{ marginTop: '20px' }}>
         <h2>Selected Options:</h2>

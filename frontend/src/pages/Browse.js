@@ -15,9 +15,11 @@ function Browse() {
   const dropdownOptions4 = ['Teacher1', 'Teacher2', 'Teacher3'];
 
   return (
-    <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+    <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif', color: 'white' }}>
      <h1>Please Select School/Department/Course/Unit</h1>
       <div className='dd-content'>
+
+
         {/* Dropdown 1 */}
         <div className='dd1'>
             <select

@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//import List from './containers/List';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styling/index.css';
 
@@ -8,6 +10,7 @@ import Home from './pages/Home';
 import Browse from './pages/Browse';
 import MyCourses from './pages/MyCourses';
 import DataTest from './pages/DataTest';
+import Edit from './pages/Edit';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -37,9 +40,14 @@ const router = createBrowserRouter([
   {
     path: "/data-test",
     element: <DataTest />
+  },
+  {
+    path: "/edit-course",
+    element: <Edit />
   }
 ]);
 
+const container = document.getElementById('app');
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

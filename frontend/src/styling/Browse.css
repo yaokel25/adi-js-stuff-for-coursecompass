@@ -3,14 +3,16 @@
     position: fixed;
     top: 100px;
     left: 0px;
+    height: 100%;
+    width: 100%;
     z-index: 2;
+    background-color: #282c34;
 }
 
 .dd-content {
     position: relative;
     overflow: hidden;
     overflow: -moz-hidden-unscrollable;
-    background-image: url(../logo.png) no-repeat right white;
     display: inline-block;
 }
 
@@ -21,4 +23,5 @@ select {
     -webkit-appearance: none !important; 
     appearance: none !important;
     padding-right: 2rem !important;
+    background-color: white;
 }

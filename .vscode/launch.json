@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "https://github.com/TheOddAdi8/adi-js-stuff-for-coursecompass.git",
+            "request": "launch",
+            "url": "https://github.com/TheOddAdi8/adi-js-stuff-for-coursecompass.git"
+        }
+    ]
+}

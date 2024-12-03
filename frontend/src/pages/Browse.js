@@ -18,6 +18,8 @@ function Browse() {
     <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
      <h1>Please Select School/Department/Course/Unit</h1>
       <div className='dd-content'>
+
+
         {/* Dropdown 1 */}
         <div className='dd1'>
             <select

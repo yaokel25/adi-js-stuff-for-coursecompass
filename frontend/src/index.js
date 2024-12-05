@@ -43,14 +43,6 @@ const router = createBrowserRouter([
   {
     path: "/edit-course",
     element: <Edit />
-  },
-  {
-    path: "/edit-course",
-    element: <EditCourse />
-  }
-  {
-    path: "/edit-course",
-    element: <Edit />
   }
 ]);
 

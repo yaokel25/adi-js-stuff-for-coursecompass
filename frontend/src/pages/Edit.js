@@ -1,4 +1,5 @@
 const { useState } = React;
+import '../styling/Edit.css';
 
 function Edit() {
   const [title, setTitle] = useState("");

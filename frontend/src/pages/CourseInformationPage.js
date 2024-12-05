@@ -1,6 +1,5 @@
-import React from "react";
-import "../styling/App.css"; 
-import HtmlRenderer from './HtmlRenderer';
+import React from 'react';
+import HtmlEditor from '../pages/HtmlEditor';
 
 /*
 const CourseInformationPage = () => {
@@ -59,18 +58,11 @@ const CourseInformationPage = () => {
   );
 };*/
 function CourseInformationPage() {
-  const sampleHtml = `
-    <h2>Course Information</h2>
-    <p>Rendered html text</p>`;
-
   return (
     <div className="CourseInformationPage">
-      <h1>Main Application</h1>
-      <HtmlRenderer htmlContent={sampleHtml} />
+      <HtmlEditor />
     </div>
   );
 }
 
 export default CourseInformationPage;
-
-

@@ -1,7 +1,73 @@
 .Browse {
-    text-align: left;
-    position: fixed;
-    top: 100px;
-    left: 0px;
-    z-index: 2;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #282c34;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+.dd-content {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+}
+
+.dd-content > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+option {
+  font-size: 16px;
+  padding: 5px;
+}
+
+.selected-options {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.selected-options p {
+  margin: 5px 0;
 }

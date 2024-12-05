@@ -17,6 +17,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import CourseInformationPage from './pages/CourseInformationPage';
+import EditCourse from './pages/EditCourse';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/edit-course",
     element: <Edit />
+  },
+  {
+    path: "/edit-course",
+    element: <EditCourse />
   }
   {
     path: "/edit-course",

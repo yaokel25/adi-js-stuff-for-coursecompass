@@ -1,6 +1,8 @@
 import React from "react";
 import "../styling/App.css"; 
+import HtmlRenderer from './HtmlRenderer';
 
+/*
 const CourseInformationPage = () => {
   // Sample data structure for unit objectives and student skills
   const objectives = [
@@ -32,6 +34,7 @@ const CourseInformationPage = () => {
       ],
     },
   ];
+  
 
   return (
     <div className="course-page">
@@ -51,7 +54,23 @@ const CourseInformationPage = () => {
         ))}
       </div>
     </div>
+    // Function to load and display HTML content
+
   );
-};
+};*/
+function CourseInformationPage() {
+  const sampleHtml = `
+    <h2>Course Information</h2>
+    <p>Rendered html text</p>`;
+
+  return (
+    <div className="CourseInformationPage">
+      <h1>Main Application</h1>
+      <HtmlRenderer htmlContent={sampleHtml} />
+    </div>
+  );
+}
 
 export default CourseInformationPage;
+
+

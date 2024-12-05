@@ -40,7 +40,7 @@ function Edit() {
           className="editor"
           onInput={(e) => setDetails(e.target.innerHTML)}
         >
-          Type details here...
+          HTML rich textbox
         </div>
       </div>
       <button className="button" onClick={handleSave}>

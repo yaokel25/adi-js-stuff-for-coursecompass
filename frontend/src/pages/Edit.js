@@ -1,4 +1,4 @@
-const { useState } = React;
+import React, { useState } from "react";
 import '../styling/Edit.css';
 
 function Edit() {
@@ -11,28 +11,30 @@ function Edit() {
   };
 
   return (
-    <div>
-      <h1>Unit Overview Editor</h1>
+    <div className="container">
+      <h1>Lesson Plan Editor</h1>
       <div className="section">
-        <label>Title:</label><br />
+        <label htmlFor="title">Title:</label>
         <input
           type="text"
+          id="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          style={{ width: "100%", padding: "10px", margin: "10px 0" }}
+          className="input"
         />
       </div>
       <div className="section">
-        <label>Standards:</label><br />
+        <label htmlFor="standards">Standards:</label>
         <textarea
+          id="standards"
           value={standards}
           onChange={(e) => setStandards(e.target.value)}
           rows="5"
-          style={{ width: "100%", padding: "10px", margin: "10px 0" }}
+          className="textarea"
         ></textarea>
       </div>
       <div className="section">
-        <label>Details:</label><br />
+        <label>Details:</label>
         <div
           contentEditable
           className="editor"
@@ -42,7 +44,7 @@ function Edit() {
         </div>
       </div>
       <button className="button" onClick={handleSave}>
-        Save
+        Save Lesson Plan
       </button>
     </div>
   );

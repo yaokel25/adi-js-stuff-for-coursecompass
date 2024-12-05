@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import List from './containers/List';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './styling/index.css';
 
@@ -41,6 +39,10 @@ const router = createBrowserRouter([
     path: "/data-test",
     element: <DataTest />
   },
+  {
+    path: "/edit-course",
+    element: <Edit />
+  }
   {
     path: "/edit-course",
     element: <Edit />

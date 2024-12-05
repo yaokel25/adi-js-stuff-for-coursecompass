@@ -17,9 +17,8 @@ function Browse() {
   return (
     <div className='Browse' style={{ padding: '20px', fontFamily: 'Arial, sans-serif', color: 'white' }}>
      <h1>Please Select School/Department/Course/Unit</h1>
+     
       <div className='dd-content'>
-
-
         {/* Dropdown 1 */}
         <div className='dd1'>
             <select
@@ -35,7 +34,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 2 */}
+       
         <div>
             <select
               value={selectedOption2}
@@ -50,7 +49,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 3 */}
+      
         <div>
             <select
               value={selectedOption3}
@@ -65,7 +64,7 @@ function Browse() {
             </select>
         </div>
 
-        {/* Dropdown 4 */}
+      
         <div>
             <select
               value={selectedOption4}
@@ -79,7 +78,7 @@ function Browse() {
               ))}
             </select>
         </div>
-      </div>
+      </div>*/
       {/* Display selected options */}
       <div style={{ marginTop: '20px' }}>
         <h2>Selected Options:</h2>

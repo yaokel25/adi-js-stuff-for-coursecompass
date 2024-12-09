@@ -16,8 +16,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import CourseInformationPage from './pages/CourseInformationPage';
-import EditCourse from './pages/EditCourse';
+//import CourseInformationPage from './pages/CourseInformationPage';
+//import Edit from './pages/Edit';
 
 const router = createBrowserRouter([
   {
@@ -31,10 +31,6 @@ const router = createBrowserRouter([
   {
     path: "/my-courses",
     element: <MyCourses />
-  },
-  {
-    path: "/course-info",
-    element: <CourseInformationPage />
   },
   {
     path: "/data-test",

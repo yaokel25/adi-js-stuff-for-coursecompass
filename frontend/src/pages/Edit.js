@@ -1,8 +1,8 @@
 import React from "react";
-import LessonPlanPage from "./pages/LessonPlanPage";
+import LessonPlanPage from "../pages/LessonPlanPage.js";
 
-function App() {
+function Edit() {
   return <LessonPlanPage />;
 }
 
-export default App;
+export default Edit;

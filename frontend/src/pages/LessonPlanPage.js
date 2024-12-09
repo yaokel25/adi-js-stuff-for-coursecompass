@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { JoditReact } from "jodit-react";
-import '../styling/EditCourse.css';
+import React, { useState, useRef } from "react";
+import JoditEditor from "jodit-react";
+//import '../styling/EditCourse.css';
 
 const LessonPlanPage = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
-    title: "My Communities",
+    title: "Title",
     duration: "2021-04-05 to 2021-04-09",
     standards: [
       "Standard 1",
@@ -80,7 +80,7 @@ const LessonPlanPage = () => {
       <div className="field-container">
         <label>Integrated Learning Objective:</label>
         {isEditing ? (
-          <JoditReact
+          <JoditEditor
             value={formData.learningObjective}
             onBlur={(newContent) =>
               handleInputChange("learningObjective", newContent)
@@ -94,7 +94,7 @@ const LessonPlanPage = () => {
       <div className="field-container">
         <label>Inclusive Essential Question:</label>
         {isEditing ? (
-          <JoditReact
+          <JoditEditor
             value={formData.essentialQuestion}
             onBlur={(newContent) =>
               handleInputChange("essentialQuestion", newContent)
@@ -108,7 +108,7 @@ const LessonPlanPage = () => {
       <div className="field-container">
         <label>Lesson Description:</label>
         {isEditing ? (
-          <JoditReact
+          <JoditEditor
             value={formData.lessonDescription}
             onBlur={(newContent) =>
               handleInputChange("lessonDescription", newContent)

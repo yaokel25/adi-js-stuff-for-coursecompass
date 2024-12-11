@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
-//import '../styling/EditCourse.css';
+import '../styling/EditCourse.css';
 
 const LessonPlanPage = () => {
   const [isEditing, setIsEditing] = useState(false);
@@ -16,7 +16,7 @@ const LessonPlanPage = () => {
       "Objectives",
     essentialQuestion: "Essential question",
     lessonDescription:
-      "Lesson description",
+      "Unit description",
   });
 
   const handleInputChange = (field, value) => {
@@ -25,7 +25,7 @@ const LessonPlanPage = () => {
 
   return (
     <div className="lesson-plan-container">
-      <h1>Lesson Plan</h1>
+      <h1>Unit Overview</h1>
       <button
         onClick={() => setIsEditing(!isEditing)}
         className="toggle-button"
@@ -34,7 +34,7 @@ const LessonPlanPage = () => {
       </button>
 
       <div className="field-container">
-        <label>Title:</label>
+        <label>Unit:</label>
         {isEditing ? (
           <input
             type="text"

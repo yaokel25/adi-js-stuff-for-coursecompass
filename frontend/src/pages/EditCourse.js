@@ -1,4 +1,5 @@
 import '../styling/EditCourse.css';
+import JoditEditor from "jodit-react";
 
 function EditCourse() {
     return (

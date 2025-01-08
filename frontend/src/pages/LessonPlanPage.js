@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import JoditEditor from "jodit-react";
 import '../styling/EditCourse.css';
 
+
 const LessonPlanPage = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
@@ -23,7 +24,19 @@ const LessonPlanPage = () => {
     setFormData({ ...formData, [field]: value });
   };
 
-  return (
+  const config = {
+		readonly: false, 
+    //height: '450px',
+    //width: '100%',
+    toolbarButtonSize: "xsmall",
+    toolbarSticky: false,
+    toolbarStickyOffset: null
+      
+		};
+		
+	
+ 
+    return (
     <div className="lesson-plan-container">
       <h1>Unit Overview</h1>
       <button

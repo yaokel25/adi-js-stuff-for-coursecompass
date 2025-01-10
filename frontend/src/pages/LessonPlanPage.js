@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import JoditEditor from "jodit-react";
 import "../styling/EditCourse.css";
 
 const LessonPlanPage = () => {
@@ -17,6 +18,13 @@ const LessonPlanPage = () => {
       ...prevData,
       [field]: value,
     }));
+  };
+
+  const config = {
+    readonly: false,
+    toolbarButtonSize: "xsmall",
+    toolbarSticky: false,
+    toolbarStickyOffset: null,
   };
 
   return (
@@ -47,7 +55,7 @@ const LessonPlanPage = () => {
         )}
       </div>
 
-      {/* Duration and Standards*/}
+      {/* Duration and Standards remain vertical */}
       <div className="field-container">
         <label htmlFor="duration">Duration:</label>
         {isEditing ? (
@@ -83,19 +91,18 @@ const LessonPlanPage = () => {
         )}
       </div>
 
-      {/* Essential Question and Lesson Description */}
+      {/* Essential Question and Lesson Description side by side */}
       <div className="two-fields">
         {/* Essential Question */}
         <div className="field-container">
           <label htmlFor="essential-question">Inclusive Essential Question:</label>
           {isEditing ? (
-            <textarea
-              id="essential-question"
+            <JoditEditor
               value={formData.essentialQuestion}
-              onChange={(e) =>
-                handleInputChange("essentialQuestion", e.target.value)
+              config={config}
+              onBlur={(newContent) =>
+                handleInputChange("essentialQuestion", newContent)
               }
-              aria-label="Edit essential question"
             />
           ) : (
             <p>{formData.essentialQuestion}</p>
@@ -106,13 +113,12 @@ const LessonPlanPage = () => {
         <div className="field-container">
           <label htmlFor="lesson-description">Lesson Description:</label>
           {isEditing ? (
-            <textarea
-              id="lesson-description"
+            <JoditEditor
               value={formData.lessonDescription}
-              onChange={(e) =>
-                handleInputChange("lessonDescription", e.target.value)
+              config={config}
+              onBlur={(newContent) =>
+                handleInputChange("lessonDescription", newContent)
               }
-              aria-label="Edit lesson description"
             />
           ) : (
             <p>{formData.lessonDescription}</p>
@@ -120,7 +126,7 @@ const LessonPlanPage = () => {
         </div>
       </div>
 
-      {/* Integrated Learning Objective*/}
+      {/* Integrated Learning Objective as a plain textbox */}
       <div className="field-container">
         <label htmlFor="learning-objective">Integrated Learning Objective:</label>
         {isEditing ? (

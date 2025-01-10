@@ -1,11 +1,12 @@
 .lesson-plan-container {
   text-align: left;
   top: 100px;
+  height: auto;
   padding: 20px;
   position: relative;
-  background-color: #f9f9f9; 
+  background-color: gray; 
   border-radius: 8px; 
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   max-width: 1000px;
   margin: auto;
 }

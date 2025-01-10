@@ -55,7 +55,7 @@ const LessonPlanPage = () => {
         )}
       </div>
 
-      {/* Duration and Standards remain vertical */}
+      {/* Duration and Standards*/}
       <div className="field-container">
         <label htmlFor="duration">Duration:</label>
         {isEditing ? (
@@ -91,10 +91,10 @@ const LessonPlanPage = () => {
         )}
       </div>
 
-      {/* Essential Question and Lesson Description side by side */}
+      {/* Essential Question and Lesson Description*/}
       <div className="two-fields">
         {/* Essential Question */}
-        <div className="field-container">
+        <div className="field-container1">
           <label htmlFor="essential-question">Inclusive Essential Question:</label>
           {isEditing ? (
             <JoditEditor
@@ -110,7 +110,7 @@ const LessonPlanPage = () => {
         </div>
 
         {/* Lesson Description */}
-        <div className="field-container">
+        <div className="field-container2">
           <label htmlFor="lesson-description">Lesson Description:</label>
           {isEditing ? (
             <JoditEditor
@@ -126,7 +126,7 @@ const LessonPlanPage = () => {
         </div>
       </div>
 
-      {/* Integrated Learning Objective as a plain textbox */}
+      {/* Integrated Learning Objective*/}
       <div className="field-container">
         <label htmlFor="learning-objective">Integrated Learning Objective:</label>
         {isEditing ? (

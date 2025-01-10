@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import JoditEditor from "jodit-react";
 import "../styling/EditCourse.css";
 
 const LessonPlanPage = () => {
@@ -18,13 +17,6 @@ const LessonPlanPage = () => {
       ...prevData,
       [field]: value,
     }));
-  };
-
-  const config = {
-    readonly: !isEditing, // Makes the editor readonly when not in edit mode
-    toolbarButtonSize: "xsmall",
-    toolbarSticky: false,
-    toolbarStickyOffset: null,
   };
 
   return (
@@ -55,97 +47,94 @@ const LessonPlanPage = () => {
         )}
       </div>
 
-      {/* Duration and Standards side by side */}
+      {/* Duration and Standards*/}
+      <div className="field-container">
+        <label htmlFor="duration">Duration:</label>
+        {isEditing ? (
+          <input
+            id="duration"
+            type="text"
+            value={formData.duration}
+            onChange={(e) => handleInputChange("duration", e.target.value)}
+            aria-label="Enter duration"
+          />
+        ) : (
+          <p>{formData.duration}</p>
+        )}
+      </div>
+
+      <div className="field-container">
+        <label htmlFor="standards">Standards:</label>
+        {isEditing ? (
+          <textarea
+            id="standards"
+            value={formData.standards.join("\n")}
+            onChange={(e) =>
+              handleInputChange("standards", e.target.value.split("\n"))
+            }
+            aria-label="Enter standards"
+          />
+        ) : (
+          <ul>
+            {formData.standards.map((standard, index) => (
+              <li key={index}>{standard}</li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Essential Question and Lesson Description */}
       <div className="two-fields">
-        {/* Duration */}
+        {/* Essential Question */}
         <div className="field-container">
-          <label htmlFor="duration">Duration:</label>
+          <label htmlFor="essential-question">Inclusive Essential Question:</label>
           {isEditing ? (
-            <input
-              id="duration"
-              type="text"
-              value={formData.duration}
-              onChange={(e) => handleInputChange("duration", e.target.value)}
-              aria-label="Enter duration"
+            <textarea
+              id="essential-question"
+              value={formData.essentialQuestion}
+              onChange={(e) =>
+                handleInputChange("essentialQuestion", e.target.value)
+              }
+              aria-label="Edit essential question"
             />
           ) : (
-            <p>{formData.duration}</p>
+            <p>{formData.essentialQuestion}</p>
           )}
         </div>
 
-        {/* Standards */}
+        {/* Lesson Description */}
         <div className="field-container">
-          <label htmlFor="standards">Standards:</label>
+          <label htmlFor="lesson-description">Lesson Description:</label>
           {isEditing ? (
             <textarea
-              id="standards"
-              value={formData.standards.join("\n")}
+              id="lesson-description"
+              value={formData.lessonDescription}
               onChange={(e) =>
-                handleInputChange("standards", e.target.value.split("\n"))
+                handleInputChange("lessonDescription", e.target.value)
               }
-              aria-label="Enter standards"
+              aria-label="Edit lesson description"
             />
           ) : (
-            <ul>
-              {formData.standards.map((standard, index) => (
-                <li key={index}>{standard}</li>
-              ))}
-            </ul>
+            <p>{formData.lessonDescription}</p>
           )}
         </div>
       </div>
 
-      {/* Learning Objective */}
+      {/* Integrated Learning Objective*/}
       <div className="field-container">
         <label htmlFor="learning-objective">Integrated Learning Objective:</label>
         {isEditing ? (
-          <JoditEditor
+          <input
             id="learning-objective"
+            type="text"
             value={formData.learningObjective}
-            config={config}
-            onBlur={(newContent) =>
-              handleInputChange("learningObjective", newContent)
+            onChange={(e) =>
+              handleInputChange("learningObjective", e.target.value)
             }
-            aria-label="Edit integrated learning objective"
+            aria-label="Edit learning objective"
           />
         ) : (
-          <p dangerouslySetInnerHTML={{ __html: formData.learningObjective }} />
-        )}
-      </div>
-
-      {/* Essential Question */}
-      <div className="field-container">
-        <label htmlFor="essential-question">Inclusive Essential Question:</label>
-        {isEditing ? (
-          <JoditEditor
-            id="essential-question"
-            value={formData.essentialQuestion}
-            config={config}
-            onBlur={(newContent) =>
-              handleInputChange("essentialQuestion", newContent)
-            }
-            aria-label="Edit essential question"
-          />
-        ) : (
-          <p dangerouslySetInnerHTML={{ __html: formData.essentialQuestion }} />
-        )}
-      </div>
-
-      {/* Lesson Description */}
-      <div className="field-container">
-        <label htmlFor="lesson-description">Lesson Description:</label>
-        {isEditing ? (
-          <JoditEditor
-            id="lesson-description"
-            value={formData.lessonDescription}
-            config={config}
-            onBlur={(newContent) =>
-              handleInputChange("lessonDescription", newContent)
-            }
-            aria-label="Edit lesson description"
-          />
-        ) : (
-          <p dangerouslySetInnerHTML={{ __html: formData.lessonDescription }} />
+          <p>{formData.learningObjective}</p>
         )}
       </div>
     </div>

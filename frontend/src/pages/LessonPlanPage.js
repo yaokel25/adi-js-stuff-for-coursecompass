@@ -21,7 +21,7 @@ const LessonPlanPage = () => {
   };
 
   const config = {
-    readonly: !isEditing, 
+    readonly: !isEditing, // Makes the editor readonly when not in edit mode
     toolbarButtonSize: "xsmall",
     toolbarSticky: false,
     toolbarStickyOffset: null,
